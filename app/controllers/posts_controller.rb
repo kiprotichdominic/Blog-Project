@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  skip_before_action :authenticate_request, only: [:create,:index,:show]
+  skip_before_action :authorized, only: [:index,:show]
   # before_action :set_post, only: [:show, :destroy]
 
   def index
